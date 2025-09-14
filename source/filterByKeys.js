@@ -14,12 +14,11 @@ const filterObjectByKeys = function (obj, keys) {
         return result;
     }
 
-    for (let i = 0; i < keys.length; i++) {
-        const key = keys[i];
+    keys.forEach(key => {
         if (Object.prototype.hasOwnProperty.call(obj, key)) {
             result[key] = obj[key];
         }
-    }
+    });
 
     return result;
 };
